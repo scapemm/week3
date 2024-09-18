@@ -1,87 +1,145 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
 using namespace std;
 
+void problem1(){
+    int x;
+    cin >> x;
+    if(x<0) cout << "Negative\n";
+    else cout << "Positive\n";
+};
+void problem2(){
+    int x;
+   cin >> x;
+   if(x%2==0 && x<0){
+       cout << "The number is negative and even\n";
+   }
+   else if(x%2==0 && x>0){
+       cout << "The number is positive and even\n";
+   }
+  else if(x%2==1 && x<0){
+      cout << "The number is negative and odd\n";
+   }
+  else{
+       cout << "The number is negative and even\n";
+   }
+};
+void problem3(){
+    int a,b,c;
+   cin >> a >> b >> c;
+    if(a>=b && a>=c){
+        cout << a << " is the largest\n";
+    }
+    else if(b>=a && b>=c){
+        cout << b << " is the largest\n";
+    }
+    else{
+        cout << c << " is the largest\n";
+    }
+
+}
+void problem4(){
+    // problem 4
+    int a,b;
+    cin >> a >> b;
+    if(a%b) cout << a << " is not divisible by " << b;
+   else cout << a << " is divisible by " << b;
+};
+void problem5(){
+    // problem 5
+    int a;
+    cin >> a;
+    if((a%400==0) || (a%4==0 && a%100!=0)){
+        cout << a << " is a leap year";
+    }
+    else{
+        cout << a << " is not a leap year";
+    }
+};
+
+void problem6(){
+    double a,b,c;
+    cin >> a >> b >> c;
+    double x1,x2,dis;
+    dis = (b*b-4*a*c);
+    x1 = ((-1*b)+sqrt(dis)) / (2*a);
+    x2 = ((-1*b)-sqrt(dis)) / (2*a);
+    cout << "x1=" << x1 << "\n";
+    cout << "x2=" << x2 << "\n";
+
+};
+void problem7(){
+    int a,b,c;
+    cin >> a >> b >> c;
+    if(a+b+c<181){
+        cout << "The triangle is valid";
+    }
+    else cout << "The triangle is not valid";
+
+};
+void problem8(){
+    char a;
+    cin >> a;
+    if(a>='a' && a<='z'){
+        cout << "Lowercase alphabet";
+    }
+    else if((a>='A' && a<='Z')){
+        cout << "Uppercase alphabet";
+    }
+    else{
+        cout << "It is not an alphabet";
+    }
+};
+void problem9(){
+    // (0,0) rad 10
+    double a,b;
+    cin >> a >> b;
+    if(a*a+b*b<=100){
+        cout << "Point(" << a << ',' << b << ") is in circle";
+    }
+    else cout << "Point(" << a << ',' << b << ") is not in circle";
+};
+void problem10(){
+    double a,b,c,d;
+    cout << "Enter weight and price for package 1: ";
+    cin >> a >> b;
+    cout << "Enter weight and price for package 2: ";
+    cin >> c >> d;
+    if(a/b > c/d) {
+        cout << "Package 1 has a better price\n";
+    }
+    else if(a/b < c/d){
+        cout << "Package 2 has a better price\n";
+    }
+    else cout << "Two packages have the same price\n";
+}
 int main() {
-    // problem 9
-//    double a,b,c;
-//    cout << "Enter v.0 :";cin >> a;
-//    cout << "Enter v.0: "; cin >> b;
-//    cout << "Enter time: "; cin >> c;
-//
+    // problem1();
 
-//       cout << (b-a)/c << "\n";
+    // problem2();
 
-       // problem 10
-//       double dis,eff,pri;
-//       cout << "Enter distance to drive :"; cin >> dis;
-//       cout << "Enter fuel efficciency: "; cin >> eff;
-//       cout << "Enter price: ";cin >> pri;
-//       cout << dis/eff*pri << "\n";
+    // problem3();
 
+    // problem4();
 
-           // problem 11
+    // problem5();
 
+     //problem6();
 
-//    double a=1.13e3,b=411e-4;
-//    cout << "Example Values 1.533e4 and 424e-3\n";
-//    cout << a << ' ' << b << "\n";
-    // problem 12
-//    cout << 241/11 << ' ';
-//    if(241%11==0){
-//        cout << 11 << "\n";
-//    }
-//    else cout << 241%11 << "\n";
+    // problem7();
 
-    // problem 13
-//    double s;
-//    cin >> s;
-//    cout <<  "The area of the hexagon is: " << sqrt(27) / 2 * s *s << "\n";
-    // problem 14
-//    char a = 'A'; // HELLO 65
-//    cout <<  char(int(a)+7) ;
-//    cout << char(int(a)+4) ;
-//    cout << char(int(a)+11) ;
-//    cout << char(int(a)+11) ;
-//    cout << char(int(a)+14) ;
-//    cout << char(int(a)-32);
+    // problem8();
 
-    // problem 15
-//    int x=17,y=1;
-//    double z = (x + ++x) / ((++(++y)) * double((--y)));
-//    cout << z << "\n";
+     //problem9();
 
-    // problem 16
-
-//    int a,b;
-//    cin >> a >> b;
-//    cout << (a==b);
+     //problem10();
 
 
-    // problem 17
-//    int a,b;
-//    cin >> a >> b;
-//    cout << ((a<140) && (a<b)) << "\n";
 
 
-    // problem 18
-//    int a,b,c;
-//    cin >> a >> b >> c;
-//    cout << (a>=b && a>=c);
 
 
-    // problem 19
-//    int a,b,c,d,e;
-//    cin >> a >> b >> c >> d >> e;
-//    cout << ((a>=0) || (b>=0)  || (c>=0) || (d>=0) || (e>=0)) << "\n";
-
-
-    // problem 20
-//    int a,b;
-//    cin >> a >> b;
-//    cout << (a+b>30 && a*b > 30) <<" ";
-//    cout <<(a+b-10>30 || a*(b-10) > 30) << " ";
-//    cout << (a>30 || b>30) << "\n";
 
     return 0;
 }
+
